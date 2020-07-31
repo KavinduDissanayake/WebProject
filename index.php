@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-md-4 col-12 text-right ">
                     <p class="my-md-4 header-links">
-                        <a href="#" class="px-2">Sign in</a>|
+                        <a href="login.html" class="px-2">Sign in</a>|
                         <a href="#" class="px-1">Create an account</a>
                     </p>
                 </div>            
@@ -60,7 +60,7 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Shop</a>
+                  <a class="nav-link" href="shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About us</a>

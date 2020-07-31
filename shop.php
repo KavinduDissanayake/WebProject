@@ -53,7 +53,7 @@ if( $_SESSION["name"]==""){
                     <div class="row">
                     <div class="col-md-8 header-links">
                         <h3><?php echo $_SESSION["name"] ?></h3>
-                        <a href="index.php" class="px-1">Logout</a>
+                        <a href="index.php" class="px-1" onclick="<?php session_destroy();?>" >Logout</a>
                         
 </div>
 
