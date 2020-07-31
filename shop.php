@@ -1,6 +1,13 @@
 
 <?php include "API/product.php"?>
+<?php
 
+if( $_SESSION["name"]==""){
+  header("Location:login.html");
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,12 +52,25 @@
                 <div class="col-md-3 col-12 text-right ">
                     <div class="row">
                     <div class="col-md-8 header-links">
-                        <h3> User Name :</h3>
-                        <a href="#" class="px-1">Logout</a>
+                        <h3><?php echo $_SESSION["name"] ?></h3>
+                        <a href="index.php" class="px-1">Logout</a>
                         
 </div>
+
+<?php			
+$uname=$_SESSION["name"];
+				$query = "SELECT * FROM `users` WHERE `username`='$uname'";
+				$result = mysqli_query($connect, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+				?>
                     <div class="col-md-4 header-links">
-                    <img src="assets/sid1.jpg" style="width:60px;height:60px;border-radius:40px;"/>
+                    <img src="assets/profile/<?php echo $row["profile"]; ?>" style="width:60px;height:60px;border-radius:40px;"/>
+
+      <?php }
+        }?>                 
 </div>
                     
                 </div>    

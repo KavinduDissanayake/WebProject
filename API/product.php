@@ -52,4 +52,8 @@ if(isset($_GET["action"]))
 if(isset($_POST["add_to_cart_shop"])){
     echo '<script>window.location="shop.php"</script>';
 }
+
+if(isset($_POST["name"])==""){
+    // echo '<script>window.location="login.html"</script>';
+}
 ?>
