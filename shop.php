@@ -1,14 +1,23 @@
 
+
 <?php include "API/product.php"?>
+<!-- Cheack user is here -->
+
 <?php
 
-if( $_SESSION["name"]==""){
+if( $_SESSION["name"]=="" && isset($_POST['uname'])==""){
   header("Location:login.html");
+}else{
+ //echo $_POST['uname'];
+ $_SESSION["name"]=$_POST['uname'];
 }
 
 
 ?>
+<!-- Cheack user is here -->
+
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset='utf-8'>
@@ -130,8 +139,9 @@ $uname=$_SESSION["name"];
 
 						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
 
-						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-
+            <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+            
+            <input type="hidden" name="uname" value="<?php echo $_SESSION["name"] ?>" />
 						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
 
 					</div>
@@ -198,4 +208,5 @@ $uname=$_SESSION["name"];
 </footer>
 <!-- Footer -->
 </body>
+
 </html>

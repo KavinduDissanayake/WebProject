@@ -1,3 +1,8 @@
+<!-- Cheack user is here -->
+
+<!-- Cheack user is here -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +19,7 @@
 <div class="sidenav bg-light">
 <img src="https://i.ibb.co/1vrGDLF/sid3.jpg" style="width:60px;height:60px;border-radius:40px;"/>
   <p>Admin</P>
-  <a href="#about">Logout</a>
+  <a href="../"  onclick="<?php session_destroy();?>" >Logout</a>
 
 </div>
   <!-- Model Strat to Add button -->
@@ -89,41 +94,23 @@
         </button>
       </div>
       <div class="modal-body">
-      <form class="forms-sample" name="myForm" onsubmit="return validateForm()" enctype='multipart/form-data' action="../API/AdminRegister.php"  method="post" >
+      <form class="forms-sample" name="myForm" onsubmit="return validateForm()" enctype='multipart/form-data' action="../API/AdminAddProducts.php"  method="post" >
+                
                   <div class="form-group">
-                    <label for="exampleSelectGender">Account Type</label>
-                    <select class="form-control" id="userType"  name="userType" >
-                      <option value="client">Client</option>
-                      <option value="admin">Admin</option>
-
-                    </select>
+                    <label for="exampleInputUsername1">Product  Name</label>
+                    <input type="text" class="form-control"  placeholder="Product  Name" name="pname">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputUsername1">Username</label>
-                    <input type="text" class="form-control"  placeholder="Username" name="username">
+                    <label for="exampleInputEmail1">Price</label>
+                    <input type="text" class="form-control"  placeholder="Price" name="price">
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Product Descrpiton</label>
+                    <input type="text" class="form-control"  placeholder="Product Descrpiton" name="pdes">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control"  placeholder="Email" name="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control"  placeholder="Password" name="password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Address</label>
-                    <input type="text" class="form-control"  placeholder="Address" name="address">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">city</label>
-                    <input type="text" class="form-control"  placeholder="city" name="city">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">zipcode</label>
-                    <input type="text" class="form-control"  placeholder="zipcode" name="zipcode">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Image</label>
+                    <label for="exampleInputEmail1">Product Image</label>
                     <input type="file" class="form-control" name="uploadfile">
                   </div>
                 
@@ -199,12 +186,14 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- <?php include "../API/ProductViewAdmin.php"; ?> -->
+                <?php include "../API/ProductViewAdmin.php"; ?> 
               </tbody>
             </table>
 
   
 </div>
-   
+
 </body>
+
+
 </html> 

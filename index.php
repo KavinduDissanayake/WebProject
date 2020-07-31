@@ -42,7 +42,7 @@
                 <div class="col-md-4 col-12 text-right ">
                     <p class="my-md-4 header-links">
                         <a href="login.html" class="px-2">Sign in</a>|
-                        <a href="#" class="px-1">Create an account</a>
+                        <a href="register.html" class="px-1">Create an account</a>
                     </p>
                 </div>            
             </div>

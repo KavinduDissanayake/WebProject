@@ -30,8 +30,7 @@ if ($result->num_rows > 0) {
         $_SESSION["name"] =$name;
         $_SESSION["userId"] =$id;
 
-        setcookie("userID", $id, time() + (86400 * 2), "/");
-        setcookie("user", $name, time() + (86400 * 2), "/");
+        
 
         echo 'login.scuess';
        //cheak and set location accoding to the usertype
@@ -39,7 +38,7 @@ if ($result->num_rows > 0) {
        {
         echo "login to admin page";
             
-      //  header("Location:../Admin/"); 
+       header("Location:../Admin"); 
 
        }
     
